@@ -85,7 +85,7 @@ function lol(x,y,z){
     }else if(x !== undefined && y !== undefined && z !== undefined){
         return (x + y)/z;
     }else if(x === undefined && y === undefined && z === undefined){
-        return false'
+        return false;
     }else{
         return null
     }
