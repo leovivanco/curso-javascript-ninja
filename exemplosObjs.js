@@ -22,6 +22,8 @@ pessoa.aniversario();
 pessoa.nomeCompleto = function() {
     pessoa.nomeCompleto = `${pessoa.nome} ${pessoa.sobrenome}`
 }
+
+//Invocando meto
 pessoa.nomeCompleto();
 console.log(pessoa);
 
