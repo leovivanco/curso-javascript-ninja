@@ -4,15 +4,17 @@ para começar o desafio.
 Declare uma variável chamada `championship` que receberá o nome do campeonato,
 e imprima o nome desse campeonato no console.
 */
-// ?
-
+let championship = 'Paulista';
 /*
-Declare uma variável chamada `teams`, que receberá um array com 5 elementos.
+Declare uma variável chamada `variável`, que receberá um array com 5 elementos.
 Os elementos serão nomes de times do campeonato escolhido, e os nomes devem
 estar na ordem em que eles aparecem na tabela no momento da solução desse
 desafio.
 */
 // ?
+
+let teams = ['Corinthians', 'São Paulo', 'Palmeiras', 'Santos', 'Ponte Preta'];
+
 
 console.log( 'Times que estão participando do campeonato:', teams );
 
@@ -32,22 +34,40 @@ Crie uma função chamada `showTeamPosition` com as seguintes características:
     - Se não houver time para a posição passada, deve retornar a mensagem:
     "Não temos a informação do time que está nessa posição."
 */
-// ?
+
+function showTeamPosition(num) {
+    return !num || num > teams.length ? `Não temos a informação do time que está nessa posição.` : `O time que está em ${num}º lugar é o ${teams[num - 1]}`;
+}
+
+console.log(showTeamPosition(4));
+
+
 
 /*
 Escolha 4 times do campeonato selecionado e mostre a posição dele, usando a
 função acima. Entre esses 4, adicione 1 que não esteja entre os 5 primeiros.
 */
-// ?
+
+
+
 
 /*
 Mostre os números de 20 a 30 no console (inclusive o 30), usando a estrutura de
 repetição "while".
 */
-// ?
+let i = 20;
+while (i =< 30) {
+    i++;
+    console.log(i);
+}
+
+
 
 /*
 Crie uma função chamada `convertToHex`, com as seguintes características:
+
+
+
     - A função recebe uma cor por parâmetro, do tipo string. Exemplo: "red";
     - Escolha 5 cores que serão convertidas do nome da cor para o seu
     equivalente hexadecimal (pode ser qualquer tom);
@@ -58,9 +78,34 @@ Crie uma função chamada `convertToHex`, com as seguintes características:
     a frase:
     "Não temos o equivalente hexadecimal para [COR]."
 */
-// ?
+function convertToHex(cor) {
+    let corDecimal = '';
+    switch (cor) {
+        case 'red':
+        corDecimal = "f00";
+            break;
+        case 'yellow':
+            corDecimal = "ff0";
+            break;
+        case 'black':
+            corDecimal = "000";
+            break;
+        case 'white':
+            corDecimal = "fff";
+            break;
+        default:
+            return `Não temos o equivalente hexadecimal para ${cor}`
+            break;
+    }
+    return `O hexadecimal para a cor ${cor} é #${corDecimal}.`;
+}
+
+
+
+
 
 /*
 Tente mostrar o hexadecimal de 8 cores diferentes usando a função criada acima.
 */
-// ?
+console.log(convertToHex('white'));
+console.log(convertToHex('jjjj'));
